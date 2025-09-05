@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matthew Cox | CinemattC — Filmmaker & Videographer</title>
+  <meta name="description" content="Portfolio of Matthew Cox (CinemattC) — weddings, fitness, events, and custom video work. Navy blue & orange Chicago Bears inspired." />
+  <meta property="og:title" content="Matthew Cox | CinemattC — Filmmaker & Videographer" />
+  <meta property="og:description" content="Weddings, gym content, events, promos — fast, clean, cinematic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="theme-color" content="#0B162A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0B162A; /* Bears navy */
+      --orange:#C83803; /* Bears orange */
+      --ink:#10131a;
+      --ink-2:#2b3240;
+      --paper:#f7f8fb;
+      --muted:#aab3c5;
+      --ring: 0 0 0 3px rgba(200,56,3,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--navy);color:#fff;font-family:Outfit,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:20;background:rgba(11,22,42,.9);backdrop-filter:saturate(1.2) blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#ff9a62);display:grid;place-items:center;font-weight:800;color:#0b0f18;box-shadow:0 10px 30px rgba(200,56,3,.35)}
+    .brand h1{font-size:18px;line-height:1;margin:0;font-weight:800}
+    .brand span{display:block;font-size:12px;color:#ffb693;font-weight:600;opacity:.9}
+    .nav a.btn{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12)}
+    .nav a.cta{background:var(--orange);border-color:transparent;color:#0b0f18;font-weight:800;box-shadow:0 10px 30px rgba(200,56,3,.35)}
+    .nav a.cta:focus{outline:none;box-shadow:var(--ring)}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate;}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 80% -10%,rgba(200,56,3,.20),transparent),
+      radial-gradient(800px 400px at 10% 10%,rgba(255,255,255,.06),transparent)}
+    .hero-inner{display:grid;gap:28px;grid-template-columns:1.2fr .8fr;align-items:center;padding:64px 0 36px}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding:44px 0 12px}}
+    .title{font-size:clamp(32px,6vw,58px);line-height:1.05;margin:0;font-weight:800}
+    .subtitle{font-size:clamp(16px,2.2vw,20px);color:#d3d9e6;max-width:50ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 18px;border-radius:16px;background:#121a2a;border:1px solid rgba(255,255,255,.12);color:#fff;font-weight:700}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--orange);color:#0b0f18;border-color:transparent}
+
+    .hero-card{background:#111827;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .reel{aspect-ratio:16/10;background:#0f1320}
+    .chip{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.08);color:#ffddd0;border:1px solid rgba(255,255,255,.15);padding:8px 12px;border-radius:999px;font-weight:700}
+
+    /* Sections */
+    section{padding:56px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-size:clamp(24px,4.6vw,36px);margin:0 0 18px;font-weight:800}
+    p.lead{color:#d3d9e6;max-width:60ch}
+
+    /* Services */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:900px){.cards{grid-template-columns:1fr}}
+    .card{background:#0f1625;border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:18px;display:flex;flex-direction:column;gap:12px}
+    .card h3{margin:0;font-size:20px}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(200,56,3,.16);color:#ffd2c2;border:1px solid rgba(200,56,3,.35);padding:8px 12px;border-radius:999px;font-weight:700}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}}
+    .tile{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
+    .tile img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;filter:saturate(1.05) contrast(1.02)}
+    .tile .tag{position:absolute;left:10px;bottom:10px;background:rgba(11,22,42,.75);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-weight:700}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:900px){.pricing{grid-template-columns:1fr}}
+    .plan{background:#0f1625;border:1px solid rgba(255,255,255,.08);padding:22px;border-radius:18px}
+    .price{font-weight:800;font-size:32px;color:#ffb693}
+    .list{margin:12px 0 0;padding:0 0 0 20px;color:#d3d9e6}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    @media(max-width:900px){.contact{grid-template-columns:1fr}}
+    form{display:grid;gap:12px}
+    input,textarea{background:#0c1220;border:1px solid rgba(255,255,255,.12);color:#fff;padding:12px 14px;border-radius:12px;font:inherit}
+    input:focus,textarea:focus{outline:none;box-shadow:var(--ring);border-color:transparent}
+    textarea{min-height:120px}
+
+    footer{padding:30px 0;color:#cdd6ea;border-top:1px solid rgba(255,255,255,.06)}
+
+    /* Tiny utility */
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .muted{color:#9eb0cf}
+    .sep{opacity:.35}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MC</div>
+        <div>
+          <h1>Matthew Cox <span>@CinemattC</span></h1>
+        </div>
+      </div>
+      <nav class="row">
+        <a class="btn" href="#work">Work</a>
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#rates">Rates</a>
+        <a class="btn cta" target="_blank" rel="noopener" href="https://www.instagram.com/CinemattC/">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="chip">Chicago Bears palette — Navy & Orange</div>
+        <h2 class="title">Cinematic stories that make your brand, wedding, or workout look <em style="color:#ffb693;font-style:normal;text-decoration:underline;text-decoration-color:var(--orange)">legendary</em>.</h2>
+        <p class="subtitle">I’m Matthew Cox (aka <strong>CinemattC</strong>). I shoot weddings, gym content, promos, and anything you ask. Fast turnaround, clean edits, and that crisp cinematic feel.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Book a shoot</a>
+          <a class="btn" href="#work">See recent work</a>
+        </div>
+        <div class="row muted" style="margin-top:8px;font-size:14px">
+          <span>4K • 120fps • Drone optional • Color grade included</span>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <img class="reel" alt="Showreel frame" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?q=80&w=1600&auto=format&fit=crop" />
+        <div style="padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <div class="row" style="align-items:center;gap:10px">
+            <span class="pill">Available • SoCal & Travel</span>
+            <span class="muted">Turnaround in 48–72h for short-form</span>
+          </div>
+          <a class="btn" target="_blank" rel="noopener" href="mailto:booking@matthewcox.video?subject=Shoot%20Inquiry%20(CinemattC)">Email me</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="lead">Pick a package or tell me what you need. I keep rates fair and outcomes pro.</p>
+      <div class="cards" style="margin-top:14px">
+        <div class="card">
+          <h3>Weddings</h3>
+          <p class="muted">Full-day coverage, vows, speeches, highlight film, and social cuts.</p>
+          <span class="pill">Multi-cam • Audio • Drone</span>
+        </div>
+        <div class="card">
+          <h3>Gym / Fitness</h3>
+          <p class="muted">Crisp lighting, motion, and edits that show real strength and form.</p>
+          <span class="pill">Slow‑mo • Motion • Reels</span>
+        </div>
+        <div class="card">
+          <h3>Brand / “Anything”</h3>
+          <p class="muted">Promos, events, interviews, product b‑roll, and custom requests.</p>
+          <span class="pill">Script help • Captions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work">
+    <div class="container">
+      <h2>Recent Work</h2>
+      <p class="lead">Swap these placeholders with your own thumbnails or Instagram embeds.</p>
+      <div class="grid" style="margin-top:12px">
+        <figure class="tile">
+          <img alt="Wedding highlight" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Wedding • Highlight</figcaption>
+        </figure>
+        <figure class="tile">
+          <img alt="Gym training" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Gym • Reels</figcaption>
+        </figure>
+        <figure class="tile">
+          <img alt="Product b-roll" src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Brand • B‑roll</figcaption>
+        </figure>
+        <figure class="tile">
+          <img alt="Interview setup" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Interview • Doc</figcaption>
+        </figure>
+        <figure class="tile">
+          <img alt="Event recap" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Event • Recap</figcaption>
+        </figure>
+        <figure class="tile">
+          <img alt="Drone establishing" src="https://images.unsplash.com/photo-1520975682031-a4e0b7a3fa9b?q=80&w=1400&auto=format&fit=crop" />
+          <figcaption class="tag">Aerial • Establishing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rates -->
+  <section id="rates">
+    <div class="container">
+      <h2>Rates</h2>
+      <p class="lead">Transparent, flexible, and scalable. Message me for exact quotes.</p>
+      <div class="pricing" style="margin-top:14px">
+        <div class="plan">
+          <div class="price">$ <strong>XXX</strong>+</div>
+          <h3>Weddings</h3>
+          <ul class="list">
+            <li>Highlight film (4–7 min)</li>
+            <li>Full ceremony & speeches</li>
+            <li>1–2 shooters + audio</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <div class="price">$ <strong>XX</strong> / hr</div>
+          <h3>Gym / Fitness</h3>
+          <ul class="list">
+            <li>Reels & TikToks (vertical)</li>
+            <li>Color grade + captions</li>
+            <li>48–72h turnaround</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <div class="price">$ <strong>XXX</strong>+</div>
+          <h3>Brand / Events</h3>
+          <ul class="list">
+            <li>Promos, interviews, b‑roll</li>
+            <li>Script & shot list help</li>
+            <li>Deliverables to spec</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px">Note: Travel outside SoCal billed at cost. Discounts for multi‑video retainers.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container contact">
+      <div>
+        <h2>Let’s shoot.</h2>
+        <p class="lead">Tell me the date, location, and vibe. I’ll reply fast with options and a quote.</p>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+          <!-- Replace action with your form handler or mailto if preferred -->
+          <input type="hidden" name="_subject" value="New inquiry from CinemattC site" />
+          <input required name="name" placeholder="Your name" />
+          <input required type="email" name="email" placeholder="Your email" />
+          <input name="subject" placeholder="What are we filming? (wedding, gym, brand…)" />
+          <textarea required name="message" placeholder="Dates, location, budget, references…"></textarea>
+          <button class="btn primary" type="submit">Send inquiry</button>
+        </form>
+      </div>
+      <aside class="card">
+        <h3>Quick links</h3>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/CinemattC/">Follow @CinemattC</a>
+        <a class="btn" href="mailto:booking@matthewcox.video?subject=Shoot%20Inquiry%20(CinemattC)">Email booking</a>
+        <a class="btn" href="#work">See portfolio</a>
+        <p class="muted">Prefer DMs? Instagram is cool. Email for bookings.</p>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container row" style="justify-content:space-between">
+      <div class="row" style="gap:8px;align-items:center">
+        <div class="logo" style="width:28px;height:28px">MC</div>
+        <span class="muted">© <span id="year"></span> Matthew Cox • CinemattC</span>
+      </div>
+      <div class="muted">Built with ❤️ in navy & orange <span class="sep">|</span> Deployed on GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    // Small UX niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
+      });
+    });
+  </script>
+</body>
+</html>
